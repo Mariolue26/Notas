@@ -1,0 +1,147 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1 class="titleName"> GESTOR DE NOTAS </h1>
+
+<form asp-controller="Home" asp-action="PortalUnab" class="formulario">
+    <div class="card">
+
+    @* Datos Del Primer Periodo 1 *@
+    <label>Laboratorio  1:</label>
+    @if(ViewBag.Numbers1==0)
+    {
+        <input type="number" placeholder="Ingrese la nota Laboratorio 1" name="number1" class="form-control" min="0" max="10"/>
+    }
+    else
+    {
+        <input type="number" placeholder="Ingrese la nota Laboratorio 1" name="number1" value="@ViewBag.Numbers1" class="form-control" min="0" max="10"/>
+    }
+    <br />
+
+    <label>Parcial 1:</label>
+    @if(ViewBag.Numbers2==0)
+    {
+        <input type="text" placeholder="Ingrese la nota Parcial 1" name="number2" class="form-control" min="0" max="10"/>
+    }
+    else
+    {
+        <input type="text" placeholder="Ingrese la nota Parcial 1" name="number2" value="@ViewBag.Numbers2" class="form-control" min="0" max="10"/>
+    }
+    <br />
+
+    @* Datos Del segundo Periodo *@
+    <label>Laboratorio  2:</label>
+    @if(ViewBag.Numbers3==0)
+    {
+        <input type="number" placeholder="Ingrese la nota Laboratorio 2" name="number3" class="form-control" min="0" max="10"/>
+    }
+    else
+    {
+        <input type="number" placeholder="Ingrese la nota Laboratorio 2" name="number3" value="@ViewBag.Numbers3" class="form-control" min="0" max="10"/>
+    }
+    <br />
+
+    <label>Parcial 2:</label>
+    @if(ViewBag.Numbers4==0)
+    {
+        <input type="text" placeholder="Ingrese la nota Parcial 2" name="number4" class="form-control" min="0" max="10"/>
+    }
+    else
+    {
+        <input type="text" placeholder="Ingrese la nota Parcial 2" name="number4" value="@ViewBag.Numbers4" class="form-control" min="0" max="10"/>
+    }
+    <br />
+
+    @* Datos Del tercer Periodo *@
+    <label>Laboratorio  3:</label>
+    @if(ViewBag.Numbers5==0)
+    {
+        <input type="number" placeholder="Ingrese la nota Laboratorio 3" name="number5" class="form-control" min="0" max="10"/>
+    }
+    else
+    {
+        <input type="number" placeholder="Ingrese la nota Laboratorio 3" name="number5" value="@ViewBag.Numbers5" class="form-control" min="0" max="10"/>
+    }
+    <br />
+
+    <label>Parcial 3:</label>
+    @if(ViewBag.Numbers6==0)
+    {
+        <input type="text" placeholder="Ingrese la nota Parcial 3" name="number6" class="form-control" min="0" max="10"/>
+    }
+    else
+    {
+        <input type="text" placeholder="Ingrese la nota Parcial 3" name="number6" value="@ViewBag.Numbers6" class="form-control" min="0" max="10"/>
+    }
+    <br />
+
+
+    <button class="btn btn-warning">Registrar Periodo</button> 
+    </div>
+    <br />
+    <div class="resultView">
+     <h1 class="title-result">RESULTADOS</h1>
+
+     @if(ViewBag.NotaEnviar == 0) @*<- Inicio del proceso de impresion, saludo al usuario.*@
+        {
+            <h5>Bienvenido, ingresa valores a operar.</h5>
+        }
+        else
+        {
+               @if(ViewBag.NotaEnviar > 6)
+                    {
+                        <table>
+                              <tr>
+                                <th>Materia</th>
+                                <th>Lab 1</th>
+                                <th>Parcial 1</th>
+                                <th>Lab 2</th>
+                                <th>Parcial 2</th>
+                                <th>Lab 3</th>
+                                <th>Parcial 3</th>
+                                <th>Final Periodo</th>
+                              </tr>
+                              <tr>
+                                <td>Programación Aplicada II</td>
+                                <td>@ViewBag.Numbers1</td>
+                                <td>@ViewBag.Numbers2</td>
+                                <td>@ViewBag.Numbers3</td>
+                                <td>@ViewBag.Numbers4</td>
+                                <td>@ViewBag.Numbers5</td>
+                                <td>@ViewBag.Numbers6</td>
+                                <td style="background-color:limegreen">@ViewBag.NotaEnviar</td>
+                              </tr>
+                         </table>
+                    }
+                    else
+                    {
+                        <table>
+                              <tr>
+                                <th>Materia</th>
+                                <th>Lab 1</th>
+                                <th>Parcial 1</th>
+                                <th>Lab 2</th>
+                                <th>Parcial 2</th>
+                                <th>Lab 3</th>
+                                <th>Parcial 3</th>
+                                <th>Final Periodo</th>
+                              </tr>
+                              <tr>
+                                <td>Programación Aplicada II</td>
+                                <td>@ViewBag.Numbers1</td>
+                                <td>@ViewBag.Numbers2</td>
+                                <td>@ViewBag.Numbers3</td>
+                                <td>@ViewBag.Numbers4</td>
+                                <td>@ViewBag.Numbers5</td>
+                                <td>@ViewBag.Numbers6</td>
+                                <td style="background-color:antiquewhite">@ViewBag.NotaEnviar</td>
+                              </tr>
+                         </table>
+                   }
+        }
+       
+    </div>
+</form>
+
