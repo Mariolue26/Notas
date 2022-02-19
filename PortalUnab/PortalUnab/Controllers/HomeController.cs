@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PortalUnab.Bussines;
 using PortalUnab.Models;
+using PortalUnab.Services;
 using System.Diagnostics;
 
 namespace PortalUnab.Controllers
@@ -34,6 +36,69 @@ namespace PortalUnab.Controllers
             return View();
         }
 
+       
+        public IActionResult Ejercicio(Acciones acciones)
+        {
+            if (acciones.number1 > 10 || acciones.number2 > 10)
+            {
+                return View("NoMayores");
+            }
+            ViewBag.Numbers1 = acciones.number1;
+            ViewBag.Numbers2 = acciones.number2;
+
+            Operaciones op = new Operaciones();
+            Double result = op.Suma(acciones);
+            ViewBag.VariableAEnviar = result; 
+            return View();
+        }
+
+        public IActionResult Resta(Acciones acciones)
+        {
+            if (acciones.number1 > 10 || acciones.number2 > 10)
+            {
+                return View("NoMayores");
+            }
+            ViewBag.Numbers1 = acciones.number1;
+            ViewBag.Numbers2 = acciones.number2;
+
+            Operaciones op = new Operaciones();
+            Double result = op.Resta(acciones);
+            ViewBag.VariableAEnviar = result;
+            return View();
+        }
+
+        public IActionResult Multi(Acciones acciones)
+        {
+            if (acciones.number1 > 10 || acciones.number2 > 10)
+            {
+                return View("NoMayores");
+            }
+            ViewBag.Numbers1 = acciones.number1;
+            ViewBag.Numbers2 = acciones.number2;
+
+            Operaciones op = new Operaciones();
+            Double result = op.Multi(acciones);
+            ViewBag.VariableAEnviar = result;
+            return View();
+
+        }
+
+        public IActionResult Div(Acciones acciones)
+        {
+            if (acciones.number1 > 10 || acciones.number2 > 10)
+            {
+                return View("NoMayores");
+            }
+            ViewBag.Numbers1 = acciones.number1;
+            ViewBag.Numbers2 = acciones.number2;
+
+            Operaciones op = new Operaciones();
+            Double result = op.Div(acciones);
+            ViewBag.VariableAEnviar = result;
+            return View();
+        }
+
+        /*Metodo tradicional*/
         public IActionResult PortalUnab(double number1, double number2, double number3, double number4, double number5, double number6)
         {
             if (number1 > 10 || number2 > 10 || number3 > 10 || number4 > 10 || number5 > 10 || number6 > 10)
@@ -76,6 +141,12 @@ namespace PortalUnab.Controllers
             //Impresion de promedios finales
             //ViewBag.VariableAEnviar = result;
             ViewBag.NotaEnviar = Final;
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult PeticionTypeGet()
+        {
             return View();
         }
     }
