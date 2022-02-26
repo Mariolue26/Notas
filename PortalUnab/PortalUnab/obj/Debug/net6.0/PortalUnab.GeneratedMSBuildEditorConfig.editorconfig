@@ -15,20 +15,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\marol\Desktop\PortalUnab\PortalUnab\PortalUnab
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/marol/Desktop/PortalUnab/PortalUnab/PortalUnab/Views/Home/Div.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaXYuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/marol/Desktop/PortalUnab/PortalUnab/PortalUnab/Views/Home/Ejercicio.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFamVyY2ljaW8uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/marol/Desktop/PortalUnab/PortalUnab/PortalUnab/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/marol/Desktop/PortalUnab/PortalUnab/PortalUnab/Views/Home/Multi.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNdWx0aS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/marol/Desktop/PortalUnab/PortalUnab/PortalUnab/Views/Home/NoMayores.cshtml]
@@ -41,10 +29,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/marol/Desktop/PortalUnab/PortalUnab/PortalUnab/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/marol/Desktop/PortalUnab/PortalUnab/PortalUnab/Views/Home/Resta.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXN0YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/marol/Desktop/PortalUnab/PortalUnab/PortalUnab/Views/Home/View.cshtml]

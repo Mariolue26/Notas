@@ -67,6 +67,20 @@ tr:nth-child(even) {
     margin-bottom: 60px
 }
 
+.title-result2 {
+    margin-top: 100px;
+    margin-bottom: 60px
+}
+
 h5{
     font-size: 20px;
+}
+
+.table-principal{
+    margin-left: -10px;
+}
+
+.table-periodo {
+    margin-top: 80px;
+    margin-left: -10px;
 }

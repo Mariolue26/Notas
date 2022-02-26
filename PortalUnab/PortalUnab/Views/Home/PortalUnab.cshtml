@@ -79,10 +79,11 @@
 
 
     <button class="btn btn-warning">Registrar Periodo</button> 
+
     </div>
     <br />
     <div class="resultView">
-     <h1 class="title-result">RESULTADOS</h1>
+     <h1 class="title-result">RESULTADO FINAL</h1>
 
      @if(ViewBag.NotaEnviar == 0) @*<- Inicio del proceso de impresion, saludo al usuario.*@
         {
@@ -92,7 +93,7 @@
         {
                @if(ViewBag.NotaEnviar > 6)
                     {
-                        <table>
+                        <table class="table-principal">
                               <tr>
                                 <th>Materia</th>
                                 <th>Lab 1</th>
@@ -117,7 +118,7 @@
                     }
                     else
                     {
-                        <table>
+                        <table class="table-principal">
                               <tr>
                                 <th>Materia</th>
                                 <th>Lab 1</th>
@@ -140,8 +141,63 @@
                               </tr>
                          </table>
                    }
+           
+               <h1 class="title-result2">RESULTADO POR PERIODO</h1> 
+
+                  <table class="table-periodo">
+                              <tr>
+                                <th>Materia</th>
+                                <th>Lab 1</th>
+                                <th>Parcial 1</th>
+                                <th>Promedio</th>
+                                <th>Promedio 1 UNAB</th>
+                              </tr>
+                              <tr>
+                                <td>Programación Aplicada II</td>
+                                <td>@ViewBag.Numbers1</td>
+                                <td>@ViewBag.Numbers2</td>
+
+                                <td>@ViewBag.Result1</td>
+                                <td>@ViewBag.Prom</td>
+                              </tr>
+                </table>
+
+               <table class="table-periodo">
+                              <tr>
+                                <th>Materia</th>
+                                <th>Lab 2</th>
+                                <th>Parcial 2</th>
+                                <th>Promedio</th>
+                                <th>Promedio 2 UNAB</th>
+                              </tr>
+                              <tr>
+                                <td>Programación Aplicada II</td>
+                                <td>@ViewBag.Numbers3</td>
+                                <td>@ViewBag.Numbers4</td>
+
+                                <td>@ViewBag.Result2</td>
+                                <td>@ViewBag.Prom2</td>
+                              </tr>
+                </table>
+
+               <table class="table-periodo">
+                              <tr>
+                                <th>Materia</th>
+                                <th>Lab 3</th>
+                                <th>Parcial 3</th>
+                                <th>Promedio</th>
+                                <th>Promedio 3 UNAB</th>
+                              </tr>
+                              <tr>
+                                <td>Programación Aplicada II</td>
+                                <td>@ViewBag.Numbers5</td>
+                                <td>@ViewBag.Numbers6</td>
+
+                                <td>@ViewBag.Result3</td>
+                                <td>@ViewBag.Prom3</td>
+                              </tr>
+                </table>
         }
- 
     </div>
 </form>
 

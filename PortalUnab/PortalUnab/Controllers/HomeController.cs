@@ -36,68 +36,6 @@ namespace PortalUnab.Controllers
             return View();
         }
 
-       
-        public IActionResult Ejercicio(Acciones acciones)
-        {
-            if (acciones.number1 > 10 || acciones.number2 > 10)
-            {
-                return View("NoMayores");
-            }
-            ViewBag.Numbers1 = acciones.number1;
-            ViewBag.Numbers2 = acciones.number2;
-
-            Operaciones op = new Operaciones();
-            Double result = op.Suma(acciones);
-            ViewBag.VariableAEnviar = result; 
-            return View();
-        }
-
-        public IActionResult Resta(Acciones acciones)
-        {
-            if (acciones.number1 > 10 || acciones.number2 > 10)
-            {
-                return View("NoMayores");
-            }
-            ViewBag.Numbers1 = acciones.number1;
-            ViewBag.Numbers2 = acciones.number2;
-
-            Operaciones op = new Operaciones();
-            Double result = op.Resta(acciones);
-            ViewBag.VariableAEnviar = result;
-            return View();
-        }
-
-        public IActionResult Multi(Acciones acciones)
-        {
-            if (acciones.number1 > 10 || acciones.number2 > 10)
-            {
-                return View("NoMayores");
-            }
-            ViewBag.Numbers1 = acciones.number1;
-            ViewBag.Numbers2 = acciones.number2;
-
-            Operaciones op = new Operaciones();
-            Double result = op.Multi(acciones);
-            ViewBag.VariableAEnviar = result;
-            return View();
-
-        }
-
-        public IActionResult Div(Acciones acciones)
-        {
-            if (acciones.number1 > 10 || acciones.number2 > 10)
-            {
-                return View("NoMayores");
-            }
-            ViewBag.Numbers1 = acciones.number1;
-            ViewBag.Numbers2 = acciones.number2;
-
-            Operaciones op = new Operaciones();
-            Double result = op.Div(acciones);
-            ViewBag.VariableAEnviar = result;
-            return View();
-        }
-
         /*Metodo tradicional*/
         public IActionResult PortalUnab(double number1, double number2, double number3, double number4, double number5, double number6)
         {
@@ -120,7 +58,7 @@ namespace PortalUnab.Controllers
             float Proceso2 = (float)(result2 / 3);
             Double Periodo2 = Math.Round(Proceso2, 1);
 
-            //Nota por periodo 2
+            //Nota por periodo 3
             Double resultN5 = 40 * number5 / 100;
             Double resultN6 = 60 * number6 / 100;
             Double result3 = resultN5 + resultN6;
@@ -134,6 +72,12 @@ namespace PortalUnab.Controllers
             ViewBag.Numbers4 = number4;
             ViewBag.Numbers5 = number5;
             ViewBag.Numbers6 = number6;
+            ViewBag.Result1 = result;
+            ViewBag.Result2 = result2;
+            ViewBag.Result3 = result3;
+            ViewBag.Prom = Periodo;
+            ViewBag.Prom2 = Periodo2;
+            ViewBag.Prom3 = Periodo3;
 
             //Nota final
             Double validacion = Periodo + Periodo2 + Periodo3;
